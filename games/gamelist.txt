@@ -1,0 +1,3 @@
+testgame1|Test Game [original]
+testgame2|Test Game [supercharged]
+sampleGame|Sample Game
