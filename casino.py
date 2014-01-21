@@ -1,4 +1,5 @@
 from users.user import User
+from getpass import getpass
 
 def main():
 
@@ -30,13 +31,12 @@ def main():
 """get username and password from user, load user data
 return user object"""
 def getUser():
-    #TODO make passwords invisible
 
     print "\nWelcome to our Casino! Please enter your credentials below.\n"
 
     #determine whether to create new account or load old one
     create = "blah"
-    while create not in ['','empty']:
+    while create not in ['','create','c']:
         create = raw_input("Type 'create' to make a new account"
                 " or hit Enter to proceed to log in\n").lower()
     if create=='create':
@@ -44,15 +44,15 @@ def getUser():
 
     #get account credentials
     uname = raw_input("username: ")
-    password = raw_input("password: ")
+    password = getpass("password (nothing will appear on screen) : ")
 
     if create=='create':    #create new account
-        password2 = raw_input("confirm password: ")
+        password2 = getpass("confirm password: ")
 
         while password != password2:
             print "\nPasswords did not match, please re enter."
-            password = raw_input("password: ")
-            password2 = raw_input("confirm password: ")
+            password = getpass("password: ")
+            password2 = getpass("confirm password: ")
 
         while True:
             try:
@@ -71,7 +71,7 @@ def getUser():
             except RuntimeError:
                 print "Invalid username or password. Please try again."
                 uname = raw_input("username: ")
-                password = raw_input("password: ")
+                password = getpass("password: ")
         print "Welcome back,", myUser.getName()
 
     return myUser
