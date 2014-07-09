@@ -1,3 +1,4 @@
+#!/usr/bin/python
 from users.user import User
 from getpass import getpass
 
