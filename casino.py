@@ -2,6 +2,7 @@
 from users.user import User
 from getpass import getpass
 
+
 def main():
 
     #import each module listed in the gamelist.txt
