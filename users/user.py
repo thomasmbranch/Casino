@@ -63,9 +63,10 @@ class User(object):
         #achievements can be added in string form here
 
         fileData = xorCipher(fileData,self.passhash)
+        #only secure enough to keep out the good guys
         
         #write data to file
-        #note: made up filetype 'Casino User File'
+        #note: made up filetype "Casino User Data"
         filename = "users/" + self.username + ".cud" 
         inf = open(filename, 'w')
         inf.write(fileData)
