@@ -37,7 +37,7 @@ def getUser():
 
     #determine whether to create new account or load old one
     create = "blah"
-    while create not in ['','create','c']:
+    while create not in ['','create']:
         create = raw_input("Type 'create' to make a new account"
                 " or hit Enter to proceed to log in\n").lower()
     if create=='create':    #new user; get name
