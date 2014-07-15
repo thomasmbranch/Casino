@@ -40,7 +40,7 @@ def getUser():
     while create not in ['','create','c']:
         create = raw_input("Type 'create' to make a new account"
                 " or hit Enter to proceed to log in\n").lower()
-    if create=='create':
+    if create=='create':    #new user; get name
         name = raw_input("name: ")
 
     #get account credentials
@@ -61,7 +61,7 @@ def getUser():
                 break
             except RuntimeError:
                 print "\nusername '%s' already taken, try a different one." %uname
-                uname = raw_input("username: ")
+                uname = raw_input("new username: ")
         print "Account creation successful."
 
     else:   #load account data from disk
