@@ -25,7 +25,7 @@ def play(user):
     return
 
 
-
+## COPY FROM HERE DOWN TO THE BOTTOM OF YOUR FILE ##
 if __name__=="__main__":
 
     # Here is where the test code goes. You should probably leave this
