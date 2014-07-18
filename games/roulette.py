@@ -35,5 +35,18 @@ def spin():
         return True
     return False
 
+if __name__=="__main__":
 
+    # Here is where the test code goes. You should probably leave this
+    # unmodified since this is basically what the casino program will be doing.
+    # Feel free to ignore this whole block of code, just run your program like
+    # you normally would.
+    from testUser import User
+
+    myUser = User('unicornmonkeypig123','mypwd','Billy')
+
+    while True:
+        play(myUser)
+        print "Your balance is %d credits." %myUser.getCredits()
+        if raw_input("Play again? (Y/n) ")=='n': break
 
